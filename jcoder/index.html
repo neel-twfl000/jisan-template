@@ -1,119 +1,296 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Doomato.Com</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" media="screen and(max-width:750px)"href="phone.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jcoder Heaven For Devlopers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 
 <body>
-
-    <nav id="navbar">
-        <div id="logo">
-            <img src="Static/Img/logo.png.jpg" alt="Doomato.Com" width="75px" height="75px">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Jcoder</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/about.html">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Technology</a></li>
+                            <li><a class="dropdown-item" href="#">Web Devlopment </a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Support</a></li>
+                            <li><a class="dropdown-item" href="#">Write For Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact.html">Contact Us</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-light" type="submit">Search</button>
+                </form>
+                <div class="mx-2">
+                   
+                    <button class="btn btn-primary"data-bs-toggle="modal" data-bs-target="#loginModal">Login</button>
+                    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#signupModal">SignUp</button>
+                </div>
+            </div>
         </div>
-        <ul>
-            <li class="item"><a href="#home">Home</a></li>
-            <li class="item"><a href="#services">Services</a></li>
-            <li class="item"><a href="#">About</a></li>
-            <li class="item"><a href="#">Contact Us</a></li>
-        </ul>
     </nav>
 
 
-    <section id="home">
-        <h1 class="h-primary">Welcome to DooMato</h1>
-        <P>Lorem ipsum dolor sit amet consectetur adipisicing Sapiente blanditiis!</P>
-        <P>Lorem ipsum dolor sit amet consectetur !</P>
-        <button class="btn">Order Now</button>
+  
+  <!--Login Modal -->
+  <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Login to Jcoder</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3 form-check">
+                  <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                  <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
 
-    </section>
+  
 
 
-    <section id="services-container">
-        <h1 class="h-primary center">Our Services</h1>
-        <div id="services">
-            <div class="box">
-                <img src="Static/Img/img1.png-removebg-preview.png" alt="reload image">
-                <h2 class="h-secondary center">Food Ordering</h2>
-                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rerum alias
-                    voluptatem voluptates quas expedita!</p>
+
+  <!--SignUp Modal -->
+  <div class="modal fade" id="signupModal" tabindex="-1" aria-labelledby="signupModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Creat a Jcoder account</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="input-group">
+                    <span class="input-group-text">First Name</span>
+                    <input type="text" aria-label="First name" class="form-control">
+                    <span class="input-group-text">Last Name</span>
+                    <input type="text" aria-label="Last name" class="form-control">
+                  </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label">Password</label>
+                  <input type="password" class="form-control" id="exampleInputPassword1">
+                </div>
+                <div class="mb-3">
+                    <label for="cexampleInputPassword1" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="cexampleInputPassword1">
+                  </div>
+                <button type="submit" class="btn btn-primary">Creat Account</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="static/img/pexels-fernando-arcos-211151.jpg" class="d-block w-100" alt="image reload">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Welcome to Jcoder</h2>
+                    <p>Technnology News,Devlopment and Trends</p>
+                    <button class="btn btn-danger">Technnology</button>
+                    <button class="btn btn-primary">Web Devlopment</button>
+                    <button class="btn btn-success">Tech Fun</button>
+                </div>
             </div>
-            <div class="box">
-                <img src="Static/Img/th-removebg-preview.png" alt="reload image">
-                <h2 class="h-secondary center">Food Delivery Services</h2>
-                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rerum alias
-                    voluptatem voluptates quas expedita!</p>
+            <div class="carousel-item">
+                <img src="static/img/pexels-negative-space-169573 (2).jpg" class="d-block w-100" alt="image reload">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Page design by Jcoder</h2>
+                    <p>Technnology News,Devlopment and Trends</p>
+                    <button class="btn btn-danger">Technnology</button>
+                    <button class="btn btn-primary">Web Devlopment</button>
+                    <button class="btn btn-success">Tech Fun</button>
+                </div>
             </div>
-            <div class="box">
-                <img src="Static/Img/th.png.png" alt="reload image">
-                <h2 class="h-secondary center">Bulk Ordering</h2>
-                <p class="center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam rerum alias
-                    voluptatem voluptates quas expedita!</p>
+            <div class="carousel-item">
+                <img src="static/img/pexels-markus-spiske-3970330.jpg" class="d-block w-100" alt="image reload">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2>Technnology and Web Devlopment</h2>
+                    <p>Technnology News,Devlopment and Trends</p>
+                    <button class="btn btn-danger">Technnology</button>
+                    <button class="btn btn-primary">Web Devlopment</button>
+                    <button class="btn btn-success">Tech Fun</button>
+                </div>
             </div>
         </div>
-
-    </section>
-    <hr>
-    <section id="client-section">
-
-        <h1 class="h-primary center">Our Partners</h1>
-        <div id="clients">
-            <div class="client-item">
-                <img src="Static/Img/icons8-bmw-480.png" alt="our Customers">
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <div class="container my-4">
+        <div class="row mb-2">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary-emphasis">World</strong>
+                        <h3 class="mb-0">Global Conference</h3>
+                        <div class="mb-1 text-body-secondary">Jun 23</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                            lead-in to additional content.</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img  class="bd-placeholder-img img-fluid" width="200" height="250" 
+                        src="static/img/html.jpg.jpg" alt="picture reload">
+                    </div>
+                </div>
             </div>
-            <div class="client-item">
-                <img src="Static/Img/icons8-skype-480.png" alt="our Customers">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis">Jcoder</strong>
+                        <h3 class="mb-0">Learning design</h3>
+                        <div class="mb-1 text-body-secondary">Jun 24</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img  class="bd-placeholder-img"  width="200" height="250" src="static/img/html.jpg 2.jpg" alt="picture loading">
+                    </div>
+                </div>
             </div>
-            <div class="client-item">
-                <img src="Static/Img/icons8-google-480.png" alt="our Customers">
-
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-primary-emphasis">class</strong>
+                        <h3 class="mb-0">HTML elements</h3>
+                        <div class="mb-1 text-body-secondary">Jun 25</div>
+                        <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                            lead-in to additional content.</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img  class="bd-placeholder-img" width="200" height="250" 
+                        src="static/img/html.jpg 4.jpg" alt="picture reload">
+                    </div>
+                </div>
             </div>
-            <div class="client-item">
-                <img src="Static/Img/icons8-microsoft-480.png" alt="our Customers">
-            </div>
-            <div class="client-item">
-                <img src="Static/Img/icons8-netflix-480.png" alt="our Customers">
+            <div class="col-md-6">
+                <div
+                    class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                    <div class="col p-4 d-flex flex-column position-static">
+                        <strong class="d-inline-block mb-2 text-success-emphasis">class</strong>
+                        <h3 class="mb-0">CSS elements</h3>
+                        <div class="mb-1 text-body-secondary">Nov 11</div>
+                        <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                            additional content.</p>
+                        <a href="#" class="icon-link gap-1 icon-link-hover stretched-link">
+                            Continue reading
+                            <svg class="bi">
+                                <use xlink:href="#chevron-right"></use>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="col-auto d-none d-lg-block">
+                        <img  class="bd-placeholder-img "  width="200" height="250" src="static/img/html.jpg 3.jpg" alt="picture loading">
+                    </div>
+                </div>
             </div>
         </div>
-    </section>
-<hr>
-    <section id="contact">
-        <h1 class="h-primary center">Contact Us</h1>
-        <div id="contact-box">
-            <form action="">
-                <div class="form-group">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name">
+    </div>
 
-                </div>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" name="name" id="email" placeholder="Enter your email">
+    <footer class="container mt-5">
+        <p class="float-end"><a href="#">Back to top</a></p>
+        <p>© 2022–2023 Jcoder, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+      </footer>
 
-                </div>
-                <div class="form-group">
-                    <label for="Phone">Phone Number:</label>
-                    <input type="text" name="name" id="phone" placeholder="Enter your phone">
-
-                </div>
-                <div class="form-group">
-                    <label for="write here">Write here:</label>
-                    <textarea name="write here" id="write here" cols="30" rows="10"></textarea>
-                </div>
-            </form>
-        </div>
-    </section>
-
-
-    <footer>
-        <div class="center">
-            Copyright &copy; www.DooMato.com. All rights reserved!
-        </div>
-    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
